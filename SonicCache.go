@@ -19,9 +19,9 @@ func NewSonicCache(opts ...SonicOptions) SonicCache {
 		tOpts = opts[0]
 	}
 
-	fmt.Printf("NewSonicCache {}", "Sonic Cache started... Gotta go fast")
-	fmt.Printf("NewSonicCache {} {}", "Capacity", tOpts.Capacity)
-	fmt.Printf("NewSonicCache {} {}", "TTL", tOpts.TTL)
+	fmt.Printf("NewSonicCache %s\n", "Sonic Cache started... Gotta go fast")
+	fmt.Printf("NewSonicCache %s %s\n", "Capacity", tOpts.Capacity)
+	fmt.Printf("NewSonicCache %s %s\n", "TTL", tOpts.TTL)
 	return &sonicCache{
 		entries: make(map[any]Entry, tOpts.Capacity),
 		ttl:     tOpts.TTL,
